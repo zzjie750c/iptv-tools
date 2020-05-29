@@ -20,8 +20,11 @@ jobs:
       run: |
         npm run generate https://iptv-org.github.io/iptv/languages/cmn.m3u cmn.txt
         npm run generate https://iptv-org.github.io/iptv/languages/zho.m3u zho.txt
-        npm run generate https://iptv-org.github.io/iptv/languages/jpn.m3u jpn.txt
-        npm run generate https://iptv-org.github.io/iptv/languages/kor.m3u kor.txt
+        npm run generate https://iptv-org.github.io/iptv/languages/xxx.m3u xxx.txt
+        npm run generate https://iptv-org.github.io/iptv/languages/other.m3u other.txt
+        npm run generate https://iptv-org.github.io/iptv/languages/yue.m3u yue.txt
+        npm run generate https://iptv-org.github.io/iptv/languages/tw.m3u tw.txt
+        cat cmn.txt zho.txt xxx.txt other.txt yue.txt tw.txt > tmp.txt
 
     - name: Clean
       run: rm -rf .github && ls -l .
